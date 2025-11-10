@@ -2,7 +2,8 @@ spring:
   datasource:
 #    url: jdbc:postgresql://host.docker.internal:5432/yalcoestore_v1
 #    url: jdbc:postgresql://localhost:5432/yalcoestore_v1
-#    url: jdbc:postgresql://localhost:6666/yalcoestore_docker
+
+    #    url: jdbc:postgresql://localhost:6666/yalcoestore_docker
 #    url: jdbc:postgresql://postgresqlyestore/yalcoestore_docker_compose
 #    username: yalcoestore
 #    password: yalcoestore
