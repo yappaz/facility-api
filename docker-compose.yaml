@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: estorecompose
+      POSTGRES_USER: yalcoestore
+      POSTGRES_PASSWORD: yalcoesrore26
+#    ports:
+#      - "5432:5432"
+    volumes:
+      - pgdatacompose:/var/lib/postgresql/data
+    networks:
+      - yalco-net
+  facility:
+    build: .
+    container_name: facility-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db/estorecompose
+      SPRING_DATASOURCE_USERNAME: yalcoestore
+      SPRING_DATASOURCE_PASSWORD: yalcoesrore26
+    depends_on:
+      - postgresqlyestore
+    networks:
+      - yalco-net
+
+volumes:
+  pgdatacompose:
+
+networks:
+  yalco-net:

@@ -1,0 +1,1 @@
+docker run --name postgresqldb -e POSTGRES_USER=yalcoestore -e POSTGRES_PASSWORD=yalcoestore -e POSTGRES_DB=yalcoestore_docker -p 6666:5432 -v pgdata:/var/lib/postgresql -d postgres
